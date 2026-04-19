@@ -1,0 +1,50 @@
+# Configuración de ejemplo para Madrid 2026.
+# Ajusta estas fechas según tu empresa o convenio.
+
+jornada_intensiva:
+  # En Madrid no existe un periodo universal obligatorio para todas las empresas.
+  # Para este ejemplo se usa un esquema habitual: julio, agosto y septiembre.
+  inicio: "2026-07-01"
+  fin: "2026-09-30"
+
+vacaciones:
+  # Ejemplo: 30 días naturales consecutivos.
+  # Este rango equivale a 30 días naturales, del 3 de agosto al 1 de septiembre de 2026 inclusive.
+  rangos:
+    - inicio: "2026-08-03"
+      fin: "2026-09-01"
+  dias_individuales: []
+
+festivos:
+  # Festivos oficiales de Madrid capital en 2026.
+  - "2026-01-01"
+  - "2026-01-06"
+  - "2026-04-02"
+  - "2026-04-03"
+  - "2026-05-01"
+  - "2026-05-15"
+  - "2026-10-12"
+  - "2026-11-02"
+  - "2026-11-09"
+  - "2026-12-07"
+  - "2026-12-08"
+  - "2026-12-25"
+
+horas_laborables:
+  semana_normal:
+    lunes: 9
+    martes: 9
+    miercoles: 9
+    jueves: 9
+    viernes: 6
+    sabado: 0
+    domingo: 0
+
+  jornada_intensiva:
+    lunes: 8
+    martes: 8
+    miercoles: 8
+    jueves: 8
+    viernes: 8
+    sabado: 0
+    domingo: 0

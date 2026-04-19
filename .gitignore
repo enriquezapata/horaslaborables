@@ -1,0 +1,51 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment / secrets (por si amplías el proyecto)
+.env
+.env.*
+!.env.example
+
+# Coverage / pytest (por si añades tests)
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Linters / herramientas (opcional)
+.ruff_cache/
+.tox/
+
+# Cachés / artefactos locales
+*.log
+*.tmp
+.cache/
+
+# Paquetes Windows (PyInstaller u otros)
+*.spec.bak
