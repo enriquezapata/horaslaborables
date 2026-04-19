@@ -1,13 +1,54 @@
-/* Estilo base — paleta neutra, contraste legible */
+/* Estilo base — paleta neutra, contraste legible (tema claro fijo) */
 
 QWidget {
   font-size: 13px;
   font-family: "Segoe UI", "SF Pro Text", Roboto, sans-serif;
   color: #1a1a1a;
+  background-color: #ffffff;
 }
 
 QMainWindow {
-  background: #f4f5f7;
+  background-color: #f4f5f7;
+}
+
+/* Contenido con scroll: sin esto en Windows + modo oscuro suele verse el viewport negro */
+QAbstractScrollArea,
+QScrollArea {
+  background-color: #ffffff;
+  border: none;
+}
+
+QScrollArea > QWidget > QWidget {
+  background-color: #ffffff;
+}
+
+QScrollArea QWidget#qt_scrollarea_viewport {
+  background-color: #ffffff;
+}
+
+QAbstractItemView {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  alternate-background-color: #f7f8fa;
+  selection-background-color: #c5d9f5;
+  selection-color: #1a1a1a;
+}
+
+QTabWidget > QWidget {
+  background-color: #ffffff;
+}
+
+QToolBar {
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #cfd4dc;
+  padding: 4px;
+  spacing: 8px;
+}
+
+QLabel {
+  background-color: transparent;
+  color: #1a1a1a;
 }
 
 QGroupBox {
@@ -31,6 +72,10 @@ QTabWidget::pane {
   border-radius: 6px;
   background: #ffffff;
   top: -1px;
+}
+
+QTabBar {
+  background-color: #e8eaee;
 }
 
 QTabBar::tab {
@@ -111,8 +156,32 @@ QTableWidget,
 QTextEdit {
   border: 1px solid #cfd4dc;
   border-radius: 4px;
-  background: #ffffff;
+  background-color: #ffffff;
+  color: #1a1a1a;
   alternate-background-color: #f7f8fa;
+}
+
+QListWidget::item {
+  padding: 4px 8px;
+  color: #1a1a1a;
+}
+
+QListWidget::item:selected {
+  background-color: #c5d9f5;
+  color: #1a1a1a;
+}
+
+QListWidget::item:hover:!selected {
+  background-color: #eef2f8;
+}
+
+QTableWidget::item {
+  color: #1a1a1a;
+}
+
+QTableWidget::item:selected {
+  background-color: #c5d9f5;
+  color: #1a1a1a;
 }
 
 QHeaderView::section {
@@ -157,19 +226,34 @@ QStatusBar {
 }
 
 QMenuBar {
-  background: #ffffff;
+  background-color: #ffffff;
+  color: #1a1a1a;
   border-bottom: 1px solid #cfd4dc;
 }
 
+QMenuBar::item {
+  padding: 6px 12px;
+  background-color: transparent;
+  color: #1a1a1a;
+}
+
 QMenuBar::item:selected {
-  background: #e8eef8;
+  background-color: #e8eef8;
+  color: #1a1a1a;
 }
 
 QMenu {
-  background: #ffffff;
+  background-color: #ffffff;
+  color: #1a1a1a;
   border: 1px solid #cfd4dc;
 }
 
+QMenu::item {
+  padding: 6px 28px 6px 12px;
+  color: #1a1a1a;
+}
+
 QMenu::item:selected {
-  background: #dde8f8;
+  background-color: #dde8f8;
+  color: #1a1a1a;
 }

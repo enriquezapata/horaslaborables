@@ -83,6 +83,12 @@ Desde la aplicación puedes definir año (`QSpinBox`), fechas de jornada intensi
 
 Atajos útiles: **F5** calcular, **Ctrl+O** abrir, **Ctrl+S** guardar, **Ctrl+Q** salir.
 
+### Nota técnica (legibilidad en Windows)
+
+En equipos con **modo oscuro** activo en Windows, Qt puede combinar el tema del sistema con las hojas de estilo (**QSS**) y dejar algunas zonas (áreas con scroll, listas, pestañas) con **fondo muy oscuro y poco contraste**. La aplicación fuerza el estilo **Fusion**, aplica una **paleta clara** en `gui_app.py` y extiende `gui/resources/style.qss` para que fondo y texto sean siempre legibles.
+
+**Fallo resuelto en desarrollo:** al arrancar fallaba `setIconSize()` en la barra de herramientas porque `QStyle.pixelMetric()` devuelve un entero y PyQt6 exige un `QSize` (se construye `QSize(px, px)` a partir de ese valor).
+
 ## Formato del YAML de configuración
 
 - **`jornada_intensiva`**: `inicio` y `fin` (fechas `YYYY-MM-DD`) del periodo en que aplican las horas de `horas_laborables.jornada_intensiva`.

@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
-from PyQt6.QtCore import QDate, Qt
-from PyQt6.QtGui import QAction, QActionGroup, QCloseEvent
+from PyQt6.QtCore import QDate, QSize, Qt
+from PyQt6.QtGui import QAction, QCloseEvent
 from PyQt6.QtWidgets import (
     QAbstractItemView,
     QDialog,
@@ -271,7 +271,8 @@ class MainWindow(QMainWindow):
 
         tb = QToolBar("Principal")
         tb.setMovable(False)
-        tb.setIconSize(self.style().pixelMetric(self.style().PixelMetric.PM_SmallIconSize))
+        px = self.style().pixelMetric(self.style().PixelMetric.PM_SmallIconSize)
+        tb.setIconSize(QSize(px, px))
         tb.addAction(act_calc)
         tb.addSeparator()
         tb.addAction(act_abrir)
